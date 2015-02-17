@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h1>Goodreads Clone
 
-{{outlet}}
+  {{#link-to 'authors'}} Authors {{/link-to}} |
+  {{#link-to 'books'}} Books {{/link-to}}
+
+</h1>
+
+<div class="ui grid">
+  <div class="one wide column"></div>
+  <div class="fifteen wide column">
+    {{outlet}}
+  </div>
+</div>

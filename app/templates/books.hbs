@@ -1,0 +1,15 @@
+<div class="ui grid">
+  <div class="four wide column">
+    {{#each book in model}}
+    <p>
+      {{#link-to "books.book" book}}
+      {{book.title}}
+      {{/link-to}}
+    </p>
+    {{/each}}
+  </div>
+
+  <div class="ten wide column">
+    {{outlet}}
+  </div>
+</div>

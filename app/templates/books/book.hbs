@@ -1,0 +1,33 @@
+<div class="ui grid">
+  <div class="eight wide column">
+    <h2>{{title}}</h2>
+    <div id="book-info">
+      <strong>Genre: {{genre}}</strong>
+      <br>
+      <strong>Year:  {{year}}</strong>
+      <p>
+        <a {{bind-attr href=amazonLink}}>Buy {{title}}</a>
+      </p>
+    </div>
+    <h3>
+      By {{#link-to "authors.author" author}}
+      {{author.name}}
+      {{/link-to}}
+    </h3>
+    <img {{bind-attr src=image}} alt="" width="300" />
+  </div>
+
+  <div class="eight wide column">
+    <h2>Reviews</h2>
+    {{#each review in model.reviews}}
+    <p>
+      <h3>By {{review.userName}}</h3>
+      <div id="review-info">
+        <p>
+          {{review.text}}
+        </p>
+      </div>
+    </p>
+    {{/each}}
+  </div>
+</div>

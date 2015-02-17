@@ -1,0 +1,15 @@
+<div class="ui grid">
+  <div class="four wide column">
+    {{#each author in model}}
+    <p>
+      {{#link-to "authors.author" author}}
+      {{author.name}}
+      {{/link-to}}
+    </p>
+    {{/each}}
+  </div>
+
+  <div class="ten wide column">
+    {{outlet}}
+  </div>
+</div>

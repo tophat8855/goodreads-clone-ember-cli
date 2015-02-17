@@ -1,1 +1,15 @@
-{{outlet}}
+<h2>{{name}}</h2><br>
+<img {{bind-attr src=image}} alt="" width="300" />
+<div id="author-bio">
+  {{bio}}
+</div>
+<div id="book-list">
+  <h3>Books:</h3>
+  {{#each book in model.books}}
+  <p>
+    {{#link-to "books.book" book}}
+    {{book.title}}
+    {{/link-to}}
+  </p>
+  {{/each}}
+</div>
